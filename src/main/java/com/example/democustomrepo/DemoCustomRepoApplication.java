@@ -29,7 +29,7 @@ public class DemoCustomRepoApplication {
                 .build())
                 .map(userRepository::save)
                 .map(User::getId)
-                .map(userRepository::getNameByID)
+                .map(userRepository::testMethod)
                 .forEach(System.out::println);
     }
 }

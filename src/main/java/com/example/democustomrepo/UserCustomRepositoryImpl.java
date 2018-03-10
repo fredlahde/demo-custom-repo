@@ -18,7 +18,7 @@ public class UserCustomRepositoryImpl implements UserCustomRepository {
     }
 
     @Override
-    public Optional<String> getNameByID(Long id) {
+    public Optional<String> testMethod(Long id) {
         final Query nativeQuery = em.createNativeQuery("SELECT  name from USER where id = ?");
         nativeQuery.setParameter(1, id);
         String res = (String) nativeQuery.getSingleResult();
